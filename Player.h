@@ -12,15 +12,16 @@ class Jugador{
 		int creationMode;
 		int maxMovesWin;
 		int maxMovesPlayer;
+		Jugador()=default;
 		Jugador(int,int,int);
 		void move();
 		int getPosicion();
 		void setCadenaMovimientos(string);
 		string getCadenaMovimientos();
 		void show_cadena();
-		void juega(Jugador);
-		void juega(int);
 };
+
+Jugador::Jugador(){}
 
 Jugador::Jugador(int pos, int gana, int creationMode){
 	posicion=pos;

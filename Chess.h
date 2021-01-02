@@ -17,9 +17,10 @@ class Chess
     map<int, SquareMapItem> squaresMap;
     Square squareBoard[ROWS_NUM][ROWS_NUM];
     ofstream wins, all;
-    int totalIterations = 0;
+    int totalIterations;
 
 public:
+    Chess() = default;
     Chess(Jugador);
     Chess(Jugador, Jugador);
     int getTotalIterations();
@@ -33,13 +34,17 @@ public:
     void getMoves(int, int);
 };
 
+Chess::Chess(){}
+
 Chess::Chess(Jugador p)
 {
+    totalIterations = 0;
     jugador = p;
 }
 
 Chess::Chess(Jugador p1, Jugador p2)
 {
+    totalIterations = 0;
     jugador = p1;
     jugador2 = p2;
 }
