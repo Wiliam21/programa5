@@ -3,7 +3,7 @@
 using namespace std;
 
 class Jugador{
-	private:
+	public:
 		string cadena_movimientos;
 		int posicion;
 		int pos_ganadora;
@@ -12,7 +12,6 @@ class Jugador{
 		int creationMode;
 		int maxMovesWin;
 		int maxMovesPlayer;
-	public:
 		Jugador(int,int,int);
 		void move();
 		int getPosicion();
